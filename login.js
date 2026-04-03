@@ -1,9 +1,9 @@
-function login(){
+function Login(){
 
-let email=document.getElementById("email").value;
-let pass=document.getElementById("password").value;
+let Email=document.getElementById("Email").value;
+let Pass=document.getElementById("Password").value;
 
-if(email!=="" && pass!==""){
+if(Email!=="" && Pass!==""){
 
 window.location.href="index.html";
 
@@ -13,11 +13,11 @@ window.location.href="index.html";
 
 /* Enter key navigation */
 
-document.getElementById("email").addEventListener("keypress",function(e){
+document.getElementById("Email").addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
 
-document.getElementById("password").focus();
+document.getElementById("Password").focus();
 
 }
 

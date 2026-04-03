@@ -1,14 +1,14 @@
-let expenses=JSON.parse(localStorage.getItem("expenses"))||[];
+let Expenses=JSON.parse(localStorage.getItem("Expenses"))||[];
 
-let total=0;
+let Total=0;
 
 expenses.forEach(e=>{
 
-total+=Number(e.amount);
+Total+=Number(e.amount);
 
 });
 
-document.getElementById("total").innerText=total;
+document.getElementById("Total").innerText=Total;
 
 function back(){
 
