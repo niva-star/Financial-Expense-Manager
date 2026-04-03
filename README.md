@@ -25,26 +25,6 @@ The application allows users to log in, add expenses, delete incorrect entries, 
 * CSS – Styling and user interface design
 * JavaScript – Application logic and Local Storage for saving data
 
-# Project Structure
-
-ExpenseManager
-│
-├ login.html
-├ index.html
-├ expense.html
-├ report.html
-│
-├ style.css
-│
-├ login.js
-├ dashboard.js
-├ expense.js
-├ report.js
-│
-└ images
-    └ background.jpg
-```
-
 # How to Run
 
 1. Download or clone the repository.
