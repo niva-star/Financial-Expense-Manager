@@ -10,13 +10,13 @@ window.location.href="report.html";
 
 }
 
-let Expenses=JSON.parse(localStorage.getItem("Expenses"))||[];
+let expenses=JSON.parse(localStorage.getItem("expenses"))||[];
 
 let total=0;
 
-Expenses.forEach(e=>{
+expenses.forEach(e=>{
 
-total+=Number(e.Amount);
+total+=Number(e.amount);
 
 });
 

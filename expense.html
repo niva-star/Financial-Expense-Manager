@@ -15,36 +15,28 @@
 
 <h1>Add Expense</h1>
 
-<input id="Name" placeholder="Expense Name">
+<input id="name" placeholder="Expense name">
 
-<input id="Amount" placeholder="Amount">
+<input id="amount" placeholder="Amount">
 
-<select id="Period">
+<input id="date" type="date">
 
-<option>Week</option>
-<option>Month</option>
-<option>Year</option>
-
-</select>
-
-<button onclick="AddExpense()">Add</button>
+<button onclick="addExpense()">Add Expense</button>
 
 <table>
 
 <thead>
-
 <tr>
 <th>Name</th>
 <th>Amount</th>
-<th>Period</th>
-<th></th>
+<th>Date</th>
 </tr>
-
 </thead>
 
 <tbody id="table"></tbody>
 
 </table>
+
 
 <button onclick="back()">Back</button>
 

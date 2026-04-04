@@ -1,17 +1,25 @@
-let Expenses=JSON.parse(localStorage.getItem("Expenses"))||[];
+let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 
-let Total=0;
+let total = 0;
 
-expenses.forEach(e=>{
+let reportList = document.getElementById("reportList");
 
-Total+=Number(e.amount);
+expenses.forEach(e => {
+
+total += Number(e.amount);
+
+reportList.innerHTML += `
+<div class="report-box">
+<h3>${e.name}</h3>
+<p>Amount: ₹${e.amount}</p>
+<p>Date: ${e.date}</p>
+</div>
+`;
 
 });
 
-document.getElementById("Total").innerText=Total;
+document.getElementById("total").innerText = total;
 
 function back(){
-
 window.location.href="index.html";
-
 }

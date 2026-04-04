@@ -1,16 +1,20 @@
-let Expenses=JSON.parse(localStorage.getItem("Expenses"))||[];
+let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 
 function addExpense(){
 
-let Name=document.getElementById("Name").value;
-let Amount=document.getElementById("Amount").value;
-let Period=document.getElementById("Period").value;
+let name = document.getElementById("name").value;
+let amount = document.getElementById("amount").value;
+let date = document.getElementById("date").value;
 
-if(Name===""||Amount==="")return;
+if(name === "" || amount === "" || date === "") return;
 
-Expenses.push({Name,Amount,Period});
+expenses.push({
+name:name,
+amount:amount,
+date:date
+});
 
-localStorage.setItem("Expenses",JSON.stringify(Expenses));
+localStorage.setItem("expenses", JSON.stringify(expenses));
 
 display();
 
@@ -18,9 +22,9 @@ display();
 
 function deleteExpense(i){
 
-Expenses.splice(i,1);
+expenses.splice(i,1);
 
-localStorage.setItem("Expenses",JSON.stringify(Expenses));
+localStorage.setItem("expenses", JSON.stringify(expenses));
 
 display();
 
@@ -28,21 +32,19 @@ display();
 
 function display(){
 
-let table=document.getElementById("table");
+let table = document.getElementById("table");
 
-table.innerHTML="";
+table.innerHTML = "";
 
-Expenses.forEach((e,i)=>{
+expenses.forEach((e,i)=>{
 
-table.innerHTML+=`
-
+table.innerHTML += `
 <tr>
-<td>${e.Name}</td>
-<td>${e.Amount}</td>
-<td>${e.Period}</td>
-<td><button class="Delete" onclick="DeleteExpense(${i})">Delete</button></td>
+<td>${e.name}</td>
+<td>${e.amount}</td>
+<td>${e.date}</td>
+<td><button class="delete" onclick="deleteExpense(${i})">Delete</button></td>
 </tr>
-
 `;
 
 });
