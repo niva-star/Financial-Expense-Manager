@@ -187,3 +187,90 @@ transform:translateY(-5px);
 box-shadow:0 15px 35px rgba(255,105,180,0.7);
 
 }
+
+.expense-list{
+
+max-height:200px;
+
+overflow-y:auto;
+
+margin-top:15px;
+
+}
+
+/* optional: smoother table look */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+th, td{
+
+padding:10px;
+
+text-align:center;
+
+}
+
+.dashboard-scroll{
+
+max-height:180px;
+
+overflow-y:auto;
+
+margin-top:15px;
+
+padding-right:5px;
+
+}
+
+/* keep table normal */
+
+table{
+width:100%;
+border-collapse:collapse;
+box-shadow:none;
+}
+
+table, tr, td, th{
+box-shadow: none !important;
+}
+
+.card{
+box-shadow: none !important;
+}
+.report-box{
+box-shadow: none !important;
+}
+
+th, td{
+padding:10px;
+text-align:center;
+}
+.report-scroll{
+
+max-height:220px;
+
+overflow-y:auto;
+
+margin-top:20px;
+
+padding-right:5px;
+
+}
+.expense-container{
+box-shadow: none !important;
+}
+input{
+box-shadow: none !important;
+}
+input{
+box-shadow: none !important;
+}
+button{
+box-shadow: none !important;
+}
